@@ -1,7 +1,7 @@
 <?php
 	if (!defined("ROOT_LOCATION")) {
 		define("ROOT_LOCATION",	dirname(__FILE__) . "/../..");
-		define("DOMAIN", "hanm.at");
+		define("DOMAIN", "potestas.persei.net");
 		
 		require_once(ROOT_LOCATION . "/config/general.php");
 		require_once(ROOT_LOCATION . "/libs/classes/Menu.php");
@@ -12,7 +12,7 @@
 		require_once(ROOT_LOCATION . "/libs/classes/SessionManager.php");
 		require_once(ROOT_LOCATION . "/libs/classes/Site.php");
 	
-		include_once(ROOT_LOCATION . "/libs/forceHTTPS.php");
+		// include_once(ROOT_LOCATION . "/libs/forceHTTPS.php");
 
 		Site::init();
 	
@@ -28,9 +28,9 @@
 		$mainmenu->addEntry(new MenuEntry("menu entry 1"));
 
 		$sitemap = new Menu();
-		$sitemap->addEntry(new MenuEntry("Main", "https://static.hanm.at"));
-		$sitemap->addEntry(new MenuEntry("Shop", "https://shop.hanm.at"));
-		$sitemap->addEntry(new MenuEntry("Blog", "https://blog.hanm.at"));
+		$sitemap->addEntry(new MenuEntry("bla", "blabla));
+		$sitemap->addEntry(new MenuEntry("bla", "blabla"));
+		$sitemap->addEntry(new MenuEntry("bla", blabla"));
 
 		$template = new Template(_getTemplateName(), "Template-Demo: " . _getTemplateName(), false);
 		$template->addText("template text 1");

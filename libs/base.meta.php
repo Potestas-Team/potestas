@@ -4,7 +4,7 @@
 
 	require_once(ROOT_LOCATION . "/libs/classes/URL.php");
 	
-	require_once(ROOT_LOCATION . "/libs/forceHTTPS.php");
+	// require_once(ROOT_LOCATION . "/libs/forceHTTPS.php");
 
 	require_once(ROOT_LOCATION . "/libs/classes/SessionManager.php");
 	require_once(ROOT_LOCATION . "/libs/classes/VirtualSessionManager.php");
@@ -24,5 +24,3 @@
 	Logger::logPage(URL::getHost(), URL::getFile(), substr(URL::getParameterString(), 1));
 
 	include_once(ROOT_LOCATION . "/libs/checkForCookies.php");
-	include_once(ROOT_LOCATION . "/libs/checkForLanguage.php");
-	include_once(ROOT_LOCATION . "/libs/getLocales.php");
