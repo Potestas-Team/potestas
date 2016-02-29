@@ -44,9 +44,9 @@
 			header("LOCATION: " . $url);
 			exit();
 		}
-		static public function getURL() { // + https, but don't tell anyone
+		static public function getURL() {
 			global $_SERVER;
-			return "https://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+			return "//" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 		}
 
 		static public function getFile($real = false) {

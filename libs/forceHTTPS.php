@@ -2,5 +2,5 @@
 	require_once(ROOT_LOCATION . "/libs/classes/URL.php");	
 
 	if(!isset($_SERVER['HTTPS']) || ($_SERVER['HTTPS'] != "on")) {
-		URL::redirect(URL::getURL());
+		URL::redirect("https" . URL::getURL());
 	}
