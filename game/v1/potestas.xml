@@ -11,7 +11,7 @@
 <script>
 	var Core = function() {
 	}
-	Core.init() {
+	Core.init() = function() {
 		console.log("Core.init");
 		gapi.hangout.onApiReady.add(function(eventObj) {
 			if (eventObj.isApiReady) {			
@@ -32,6 +32,7 @@
 
 	gadgets.util.registerOnLoadHandler(Core.init);
 </script>
+
 <h1>hi</h1>
 	]]>
 	</Content>
