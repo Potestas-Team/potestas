@@ -2,7 +2,7 @@
 	require_once("../core.php");
 
 	if (!isset($_GET['gameid'])) {
-		URL::redirect("");
+		URL::redirect("http://" + DOMAIN);
 	}
 ?><!DOCTYPE html>
 <html>
