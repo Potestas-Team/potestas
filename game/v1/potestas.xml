@@ -8,11 +8,14 @@
 	<![CDATA[
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script src="//plus.google.com/hangouts/_/api/v1/hangout.js"></script>
+<script src="http://potestas.persei.net/game/v1/events.js"></script>
+<script src="http://potestas.persei.net/game/v1/core.js"></script>
+
 <script>
 	const SERVER_URL = "http://potestas.persei.net/game/v1/";
 
-	$.getScript(SERVER_URL + "events.js");
-	$.getScript(SERVER_URL + "core.js");
+	//$.getScript(SERVER_URL + "events.js");
+	//$.getScript(SERVER_URL + "core.js");
 
 	gadgets.util.registerOnLoadHandler(Core.init);
 	Core.loadLayout($("#main"));
