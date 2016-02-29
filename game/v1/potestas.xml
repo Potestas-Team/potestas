@@ -8,19 +8,31 @@
 	<![CDATA[
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script src="//plus.google.com/hangouts/_/api/v1/hangout.js"></script>
-<script src="http://potestas.persei.net/game/v1/events.js"></script>
-<script src="http://potestas.persei.net/game/v1/core.js"></script>
-
 <script>
-	const SERVER_URL = "http://potestas.persei.net/game/v1/";
+	var Core = function() {
+	}
+	Core.init() {
+		console.log("Core.init");
+		gapi.hangout.onApiReady.add(function(eventObj) {
+			if (eventObj.isApiReady) {			
+				Event.registerAPIEvents();
+			}
+		});
+	}
 
-	//$.getScript(SERVER_URL + "events.js");
-	//$.getScript(SERVER_URL + "core.js");
+	var Event = function() {
+	}
+	Event.registerAPIEvents = function() {
+		console.log("Event.registerAPIEvents");
+		gapi.hangout.onParticipantsChanged.add(function(eventObj) {
+		});
+		gapi.hangout.layout.getDefaultVideoFeed().onDisplayedParticipantChanged.add(function(eventObj) {
+		});
+	}
 
 	gadgets.util.registerOnLoadHandler(Core.init);
-	Core.loadLayout($("#main"));
 </script>
-<div id="main"></div>
+<h1>hi</h1>
 	]]>
 	</Content>
 </Module>
