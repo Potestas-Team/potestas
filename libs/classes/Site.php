@@ -13,9 +13,9 @@
 			Site::$sql = new mysqli($MYSQL_HOSTNAME, $MYSQL_USERNAME, $MYSQL_PASSWORD, $MYSQL_DATABASE);
 			if (Site::$sql->connect_errno) {
 				if (DEBUG)
-					die("Site", "MySQLi connection failed: " . Site::$sql->connect_error);
+					die("Site: " . "MySQLi connection failed: " . Site::$sql->connect_error);
 				else
-					die("Site", "There is some fatal error with the database-connection.");
+					die("Site: " . "There is some fatal error with the database-connection.");
 			}
 
 			Session::init();
