@@ -18,7 +18,6 @@
 			}
 
 			Session::init();
-			UserManager::init();
 		}
 		static public function getSQL() {
 			return Site::$sql;
