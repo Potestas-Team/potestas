@@ -15,8 +15,6 @@
 	
 	for($i = 0; $i < count($schema); $i++) {
 		echo $i . ": " . $schema[$i] . " ";
-		$sql->query($schema[$i]) or die("<span style='color: red;'>fail!</span>");
+		$sql->query($schema[$i]) or die("<span style='color: red;'>fail!</span><br /><br />" . $sql->error);
 		echo "<span style='color: green;'>okay</span><br />";
 	}
-	
-	$sql->exec();
