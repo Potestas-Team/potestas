@@ -78,7 +78,9 @@ function remove_remarks($sql)
 
    for ($i = 0; $i < $linecount; $i++) 
    { 
-      if (($i != ($linecount - 1)) || (strlen($lines[$i]) > 0)) 
+	// what tha fuck is this?
+      //if (($i != ($linecount - 1)) || (strlen($lines[$i]) > 0)) 
+      if (strlen($lines[$i]) > 0)
       { 
          if ($lines[$i][0] != "#") 
          { 
