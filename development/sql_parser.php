@@ -42,7 +42,7 @@ function remove_comments(&$output)
 
    $in_comment = false; 
    for($i = 0; $i < $linecount; $i++) 
-   { 
+   {
       if( preg_match("/^\/\*/", preg_quote($lines[$i])) ) 
       { 
          $in_comment = true; 

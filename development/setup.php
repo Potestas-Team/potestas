@@ -10,6 +10,7 @@
 	$file = dirname(__FILE__) . "/schema.sql";
 	$schema = @fread(@fopen($file, "r"), @filesize($file)) or die(": (");
 	$schema = remove_remarks($schema);
+	$schema = remove_comments($schema);
 	$schema = split_sql_file($schema, ";");
 	
 	for($i = 0; $i < count($schema); $i++) {
