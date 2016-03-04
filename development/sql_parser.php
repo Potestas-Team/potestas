@@ -43,6 +43,10 @@ function remove_comments(&$output)
    $in_comment = false; 
    for($i = 0; $i < $linecount; $i++) 
    {
+	// something is missing again
+	if (substr($lines[$i], 0, 2) == "--")
+		continue;
+		
       if( preg_match("/^\/\*/", preg_quote($lines[$i])) ) 
       { 
          $in_comment = true; 
