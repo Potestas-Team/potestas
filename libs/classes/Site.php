@@ -3,7 +3,6 @@
 		die("critical: root location not defined");
 
 	require_once(ROOT_LOCATION . "/libs/classes/SessionManager.php");
-	require_once(ROOT_LOCATION . "/libs/classes/UserManager.php");
 
 	class Site {
 		static private $sql;

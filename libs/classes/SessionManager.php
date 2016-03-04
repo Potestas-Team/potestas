@@ -1,7 +1,6 @@
 <?php
 
 	require_once(ROOT_LOCATION . "/libs/classes/Site.php");
-	require_once(ROOT_LOCATION . "/libs/classes/ErrorHandler.php");	
 
 	class Session {
 		static public function init() {
@@ -11,7 +10,7 @@
 
 			session_name("session");
 			session_set_cookie_params(60 * 60 * 24 * 14, "/", "." . DOMAIN, false);
-			session_start() OR ErrorHandler::unformatedError("SessionManager", "unable to start session");
+			session_start() OR die("SessionManager: " . "unable to start session");
 			session_regenerate_id();
 			global $_SESSION;
 		
