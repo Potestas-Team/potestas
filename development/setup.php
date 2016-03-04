@@ -1,4 +1,21 @@
 <?php
 	die();
-
-
+	require_once(basedir(__FILE__) . "/../core.php");
+	
+	// (C) 2001 The phpBB Group 
+	require_once(basedir(__FILE__) . "/sql_parser.php");
+	
+	$sql = Site::getSQL();
+	
+	$file = basedir(__FILE__) . "/schema.sql";
+	$schema = @fread(@fopen($file, "r"), @filesize($file)) or die(": (");
+	$schema = remove_remarks($schema);
+	$schema = split_sql_file($schema, ";");
+	
+	for($i = 0; $i < count($schema); $i++) {
+		echo $i . ": " . $schema[$i] . " ";
+		//$sql->query($schema[$i]) or die("<span style='color: red;'>fail!</span>");
+		echo "<span style='color: green;'>okay</span>";
+	}
+	
+	$sql->exec();
