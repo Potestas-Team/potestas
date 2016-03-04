@@ -12,7 +12,6 @@
 	require_once(ROOT_LOCATION . "/libs/classes/Menu.php");
 	require_once(ROOT_LOCATION . "/libs/classes/Template.php");
 	require_once(ROOT_LOCATION . "/libs/classes/Site.php");
-	require_once(ROOT_LOCATION . "/libs/classes/UserManager.php");
 	require_once(ROOT_LOCATION . "/libs/classes/Logger.php");
 
 	require_once(ROOT_LOCATION . "/libs/miscellaneous.php");
