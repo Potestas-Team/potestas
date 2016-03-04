@@ -8,32 +8,9 @@
 	<![CDATA[
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script src="//plus.google.com/hangouts/_/api/v1/hangout.js"></script>
-<script>
-	var Core = function() {
-	}
-	Core.init() = function() {
-		console.log("Core.init");
-		gapi.hangout.onApiReady.add(function(eventObj) {
-			if (eventObj.isApiReady) {			
-				Event.registerAPIEvents();
-			}
-		});
-	}
+<script src="http://localhost/potestas.js"></script>
 
-	var Event = function() {
-	}
-	Event.registerAPIEvents = function() {
-		console.log("Event.registerAPIEvents");
-		gapi.hangout.onParticipantsChanged.add(function(eventObj) {
-		});
-		gapi.hangout.layout.getDefaultVideoFeed().onDisplayedParticipantChanged.add(function(eventObj) {
-		});
-	}
-
-	gadgets.util.registerOnLoadHandler(Core.init);
-</script>
-
-<h1>hi</h1>
+<div id="main"></div>
 	]]>
 	</Content>
 </Module>
